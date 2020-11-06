@@ -12,13 +12,16 @@ const JobList: React.FC = () => {
   }, []);
 
   return (
-    <>
-      {jobs.map((job) => (
-        <Link to={`/${job.id}`} key={job.id}>
-          <div className="jobTitle">{job.title}</div>
-        </Link>
-      ))}
-    </>
+    <div>
+      <h1>List of jobs</h1>
+      <ul>
+        {jobs.map((job) => (
+          <Link to={`/${job.id}`} key={job.id}>
+            <li>{job.title}</li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 };
 

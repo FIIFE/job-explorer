@@ -13,10 +13,17 @@ const JobDetails: React.FC = () => {
   }, [jobId]);
 
   const result = job ? (
-    <div className="jobContainer">
-      <div className="jobTitle">{job.title}</div>
-      <div className="jobDescription">{job.description}</div>
-      <div className="jobEmploymentType">{job.employment_type}</div>
+    <div>
+      <h1>Job details</h1>
+      <div>
+        <strong>Title -</strong> {job.title}
+      </div>
+      <div>
+        <strong>Description -</strong> {job.description}
+      </div>
+      <div>
+        <strong>Employment type -</strong> {job.employment_type}
+      </div>
     </div>
   ) : (
     <div>Job of this id doesn't exist</div>
