@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import getJobs, { Job } from "../../api/apiMock";
+import { getJobs, Job } from "../../api/apiMock";
 
 const JobList: React.FC = () => {
   const [jobs, setJobs] = useState<Array<Job>>([]);
